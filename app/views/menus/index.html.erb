@@ -1,2 +1,24 @@
-<h1>Menus#index</h1>
-<p>Find me in app/views/menus/index.html.erb</p>
+<h1>
+  料理検索
+</h1>
+<%= search_form_for @p, url: menus_search_path do |f| %>
+  <%= f.label :style_eq, '材料' %>
+  <%= f.collection_select :style_id, Style.all, :id, :name,  include_blank: '指定なし' %>
+  <br>
+  <%= f.submit '検索' %>
+
+
+  <%# 必要？ %>
+
+  <br>
+  <% @menus.each do |menu| %>
+  <td>
+  <br>
+  <li>
+    <%= menu.style %>
+    <%= menu.material %>
+    <%= menu.feeling %>
+    <%= menu.food.name %>
+  </li>
+  <% end %>
+<% end %>
