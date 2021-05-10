@@ -13,15 +13,15 @@
 ActiveRecord::Schema.define(version: 2021_05_10_120247) do
 
   create_table "foods", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "name", null: false
+    t.integer "name_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "menus", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "style", null: false
-    t.string "material", null: false
-    t.string "feeling", null: false
+    t.integer "style_id", null: false
+    t.integer "material_id", null: false
+    t.integer "feeling_id", null: false
     t.bigint "food_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
