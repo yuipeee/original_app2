@@ -8,9 +8,6 @@
   <%= f.label :material_eq, '材料' %>
   <%= f.collection_select :material_id_eq, Material.all, :id, :name,  include_blank: '指定なし' %>
   <br>
-  <%= f.label :feeling_eq, '気分' %>
-  <%= f.collection_select :feeling_id_eq, Feeling.all, :id, :name,  include_blank: '指定なし' %>
-  <br>
   <%= f.submit '検索' %>
 
   <%# 必要？ %>
@@ -21,7 +18,6 @@
   <li>
     <%= menu.style.name %>
     <%= menu.material.name %>
-    <%= menu.feeling.name %>
     <%= menu.food.name.name %>
   </li>
   <% end %>
