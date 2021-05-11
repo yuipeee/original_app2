@@ -2,23 +2,27 @@
   料理検索
 </h1>
 <%= search_form_for @p, url: menus_search_path do |f| %>
-  <%= f.label :style_eq, '材料' %>
-  <%= f.collection_select :style_id, Style.all, :id, :name,  include_blank: '指定なし' %>
+  <%= f.label :style_eq, '種類' %>
+  <%= f.collection_select :style_id_eq, Style.all, :id, :name,  include_blank: '指定なし' %>
+  <br>
+  <%= f.label :material_eq, '材料' %>
+  <%= f.collection_select :material_id_eq, Material.all, :id, :name,  include_blank: '指定なし' %>
+  <br>
+  <%= f.label :feeling_eq, '気分' %>
+  <%= f.collection_select :feeling_id_eq, Feeling.all, :id, :name,  include_blank: '指定なし' %>
   <br>
   <%= f.submit '検索' %>
 
-
   <%# 必要？ %>
-
   <br>
   <% @menus.each do |menu| %>
   <td>
   <br>
   <li>
-    <%= menu.style %>
-    <%= menu.material %>
-    <%= menu.feeling %>
-    <%= menu.food.name %>
+    <%= menu.style.name %>
+    <%= menu.material.name %>
+    <%= menu.feeling.name %>
+    <%= menu.food.name.name %>
   </li>
   <% end %>
 <% end %>

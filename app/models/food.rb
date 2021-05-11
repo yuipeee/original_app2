@@ -5,6 +5,6 @@ class Food < ApplicationRecord
   belongs_to :name
 
   #ジャンルの選択が「--」の時は保存できないようにする
-  validates :name_id, numericality: { other_than: 1 } 
+  validates :name_id, numericality: { other_than: 0 } 
 
 end

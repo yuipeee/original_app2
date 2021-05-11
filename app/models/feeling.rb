@@ -1,8 +1,7 @@
 class Feeling < ActiveHash::Base
   self.data = [
-    { id: 1, name: '--' },
-    { id: 2, name: 'あっさり' },
-    { id: 3, name: 'こってり' }
+    { id: 1, name: 'あっさり' },
+    { id: 2, name: 'こってり' }
   ]
 
   include ActiveHash::Associations
