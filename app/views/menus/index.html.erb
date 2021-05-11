@@ -1,21 +1,27 @@
-<h1>
-  料理検索
-</h1>
-<%= search_form_for @p, url: menus_search_path do |f| %>
-  <%= f.label :style_eq, '種類' %>
-  <%= f.collection_select :style_id_eq, Style.all, :id, :name,  include_blank: '指定なし' %>
-  <br>
-  <%= f.label :material_eq, '材料' %>
-  <%= f.collection_select :material_id_eq, Material.all, :id, :name,  include_blank: '指定なし' %>
-  <br>
-  <%= f.submit '検索' %>
+<nav class="seach">
+  <%= search_form_for @p, url: menus_search_path do |f| %>
+</nav>
 
-  <%# 必要？ %>
-  <br>
-  <% @menus.each do |menu| %>
-  <td>
-    <%# menu.style.name %>
-    <%# menu.material.name %>
-    <%# menu.food.name.name %>
+<div class="contents">
+    <br>
+    <%= f.label :material_eq, 'どの食材を使う？' %>
+    <br>
+    <%= f.collection_select :material_id_eq, Material.all, :id, :name,  include_blank: '指定なし' %>
+    <br>
+    <br>
+    <%= f.label :style_eq, 'どんな料理が食べたい気分？' %>
+    <br>
+    <%= f.collection_select :style_id_eq, Style.all, :id, :name,  include_blank: '指定なし' %>
+    <br>
+    <br>
+    <br>
+    <%= f.submit '検索' %>
+    <br>
+      <% @menus.each do |menu| %>
+        <td>
+         <%# menu.style.name %>
+         <%# menu.material.name %>
+         <%# menu.food.name.name %>
+      <% end %>
   <% end %>
-<% end %>
+</div>
