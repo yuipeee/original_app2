@@ -1,5 +1,5 @@
 28.times do |number|
-  Food.create(name_id: "#{number}")
+  Food.create(name_id: "#{number}", image:File.open("db/fixtures/icon#{number}.jpg"))
 end
 
 #和食

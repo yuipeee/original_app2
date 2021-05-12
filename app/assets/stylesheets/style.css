@@ -210,11 +210,6 @@ textarea {
 }
 
 button,
-input {
-  line-height: normal;
-}
-
-button,
 select {
   text-transform: none;
 }
@@ -601,11 +596,11 @@ body {
 
 a {
   text-decoration: none;
-  color: #FFD700;
+  color: #118625;
 }
 
 a:hover {
-  color: #fc8b21;
+  color: #2baf41;
 }
 
 .bold {
@@ -650,9 +645,6 @@ footer p {
 }
 
 /* 自分で作成 */
-h1{
-
-}
 
 h2 {
   color: #cf4545;
