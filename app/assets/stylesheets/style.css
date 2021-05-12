@@ -586,11 +586,7 @@ ul li {
 body,
 html {
   height: 100%;
-  background-color: #faf0ba;
-}
-
-body {
-  padding-top: 60px;
+  background-color: #e7cdca;
 }
 
 h1,
@@ -605,11 +601,11 @@ body {
 
 a {
   text-decoration: none;
-  color: #cf4545;
+  color: #FFD700;
 }
 
 a:hover {
-  color: #B22222;
+  color: #fc8b21;
 }
 
 .bold {
@@ -621,37 +617,19 @@ a:hover {
 }
 
 header.header {
-  padding: 10px;
-  border-bottom: 1px solid #FFD700;
-  background-color: #FFD700;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 5;
-  height: 62px;
-}
-
-header.header div.header__bar.row {
+  padding: 100px;
   position: relative;
+  height: 35vh;
+  background: url(salad-2068220_1920.jpg) center / cover;
 }
 
 header.header div.header__bar.row h1.grid-6 {
   font-size: 20px;
   line-height: 41px;
-  width: 650px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 header.header div.header__bar.row h1.grid-6 a {
   display: block;
-}
-}
-
-header.header div.header__bar.row div.grid-6 {
-  float: right;
-  text-align: right;
 }
 
 .form footer {
@@ -664,7 +642,7 @@ header.header div.header__bar.row div.grid-6 {
 footer {
   margin: 30px auto;
   padding: 10px;
-  color: #D3D3D3;
+  color: #a5a3a1;
 }
 
 footer p {
@@ -672,8 +650,8 @@ footer p {
 }
 
 /* 自分で作成 */
-h1 {
-  text-align: center;
+h1{
+
 }
 
 h2 {
