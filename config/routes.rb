@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get 'menus/search'
   root 'menus#index'
   get 'menus/search'
+  resources :menus, only: :index
 end
