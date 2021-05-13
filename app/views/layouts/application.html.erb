@@ -16,7 +16,7 @@
         <% if user_signed_in? %>
           <div class="user_nav grid-6">
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-            <%= link_to "記録する", new_user_session_path, class: "post" %>
+            <%= link_to "記録する", memos_path, class: "post" %>
           </div>
         <% else %>
           <div class="grid-6">
@@ -32,7 +32,9 @@
 
     <footer>
       <p>
-        Copyright OriginalApp2 2022.
+      <br>
+      <br>
+        OriginalApp 2022.
       </p>
     </footer>
   </body>
